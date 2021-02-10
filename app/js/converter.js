@@ -64,7 +64,11 @@ asciidoctor.browser.converter = (webExtension, Constants, Settings) => {
         }
       }
       // content has changed...
-      const result = await module.convert(url, source)
+      // load ~/header.adoc file
+
+      header = 'include::/tmp/header.adoc[]\n\n\n'
+
+      const result = await module.convert(url, header + source)
       // Update md5sum
       const value = {}
       value[md5key] = md5(source)

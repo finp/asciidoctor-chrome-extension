@@ -1,0 +1,1 @@
+google-chrome $1
