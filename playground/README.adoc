@@ -1,0 +1,30 @@
+[#alt-readme]
+= Alt readme
+:source-filename: /home/paulwright/repos/asciidoctor-chrome-extension/README.md
+
+Installing this forked version of live preview provides the following extra functionality:
+
+* each adoc render contains a new header
+* the header is a temporary file in `/tmp/header.adoc`
+* you create a script to populate that header.
+
+. Install the extension as a unpacked extension.
+
+..
+Navigate to chrome://extensions/
+
+..
+Click _Load unpacked_.
+
+..
+Choose the `app` directory from this.
+
+. Test in VS Code
+
+..
+Load this repo in VS Code.
+
+..
+Run `bin/process.sh contrib/samples/main.adoc`
+
+You should see the rendered content of main.adoc with a header showing links to the other files.
